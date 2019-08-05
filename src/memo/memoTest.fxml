@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="paneId" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memo.memoTestController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="newMenu" mnemonicParsing="false" onAction="#newFile" text="새로 만들기" />
+              <MenuItem fx:id="openMenu" mnemonicParsing="false" onAction="#openFile" text="열기" />
+                  <MenuItem fx:id="newNameMenu" mnemonicParsing="false" onAction="#newNameFile" text="새 이름으로 저장" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#closeFile" text="메모장 닫기" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextArea fx:id="taMemo" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextArea>
+   </center>
+</BorderPane>
